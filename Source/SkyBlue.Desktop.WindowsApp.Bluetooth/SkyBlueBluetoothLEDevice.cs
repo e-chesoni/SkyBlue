@@ -12,6 +12,7 @@ namespace SkyBlue.Desktop.WindowsApp.BluetoothLE
     public class SkyBlueBluetoothLEDevice
     {
         #region Public Properties
+        
         /// <summary>
         /// The time of the broadcast advertisement message of the device
         /// </summary>
@@ -28,13 +29,14 @@ namespace SkyBlue.Desktop.WindowsApp.BluetoothLE
         public string Name { get; }
 
         /// <summary>
-        /// The signal strenght in dB
+        /// The signal strength in dB
         /// </summary>
         public short SignalStrengthInDB { get; }
 
         #endregion
 
         #region Constructor
+        
         /// <summary>
         /// Default constructor
         /// </summary>
@@ -49,7 +51,7 @@ namespace SkyBlue.Desktop.WindowsApp.BluetoothLE
         #endregion
 
         /// <summary>
-        /// User friendly to string
+        /// User-friendly to string
         /// </summary>
         /// <returns>string</returns>
         public override string ToString()

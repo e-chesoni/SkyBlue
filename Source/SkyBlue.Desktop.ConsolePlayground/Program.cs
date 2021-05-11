@@ -48,7 +48,7 @@ namespace SkyBlue.Desktop.ConsolePlayground
 
             while (true)
             {
-                // Pause until we press enter
+                // Pause until enter is pressed
                 Console.ReadLine();
 
                 var devices = watcher.DiscoveredDevices;

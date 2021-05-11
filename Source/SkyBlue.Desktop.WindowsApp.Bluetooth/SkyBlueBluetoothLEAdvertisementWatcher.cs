@@ -55,9 +55,11 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
                 }
             }
         }
+
         /// <summary>
-        /// Timeout in seconds that the device is removed from the <see cref="DiscoveredDevices"/>
-        /// if it is not re-advertised within this time
+        /// Time limit (in seconds) for device removal;
+        /// if a device does not re-advertise in the alloted time,
+        /// it should be removed from the <see cref="DiscoveredDevices"/>
         /// </summary>
         public int HeartbeatTimeout { get; set; } = 30; // Change to 3 to test
 
@@ -75,7 +77,6 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
         /// </summary>
         public event Action StartedListening = () => { };
 
-
         /// <summary>
         /// Fired when a device is discovered
         /// </summary>
@@ -92,7 +93,7 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
         public event Action<SkyBlueBluetoothLEDevice> DeviceNameChanged = (device) => { };
 
         /// <summary>
-        /// Fired when a device is removed for timing out
+        /// Fired when a device is removed because of a timeout
         /// </summary>
         public event Action<SkyBlueBluetoothLEDevice> DeviceTimeout = (device) => { };
 
@@ -127,7 +128,7 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
         #region Private Methods
 
         /// <summary>
-        /// Listens out for watcher advertisements
+        /// Listens for watcher advertisements
         /// </summary>
         /// <param name="sender">The watcher</param>
         /// <param name="args">The arguments</param>
@@ -163,14 +164,17 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
                 // Create new device info instance
                 device = new SkyBlueBluetoothLEDevice
                 (
-                // Blutetooth address
-                address: args.BluetoothAddress,
-                // Name
-                name: name,
-                // Broadcast time
-                broadcastTime: args.Timestamp,
-                // Signal strenght
-                rssi: args.RawSignalStrengthInDBm
+                    // Blutetooth address
+                    address: args.BluetoothAddress,
+                    
+                    // Name
+                    name: name,
+                    
+                    // Broadcast time
+                    broadcastTime: args.Timestamp,
+                    
+                    // Signal strength
+                    rssi: args.RawSignalStrengthInDBm
                 );
 
                 // Add/update the deivce in the dictionary
@@ -198,7 +202,7 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
         {
             lock (mThreadLock)
             {
-                // The date in time that if less than means a device has timed out
+                // The date and time used to assess timeout
                 var threshold = DateTime.UtcNow - TimeSpan.FromSeconds(HeartbeatTimeout);
 
                 // Any devices that have not sent a new broadcast within the heartbeat time
@@ -212,6 +216,7 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
                 });
             }
         }
+
         #endregion
 
         #region Public Methods
@@ -223,7 +228,7 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
         {
             lock (mThreadLock)
             {
-                // If already listening...
+                // If we are currently listening...
                 if (Listening)
                     // Do nothing more
                     return;
@@ -237,13 +242,13 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
         }
 
         /// <summary>
-        /// Stops listenign for advertisements
+        /// Stops listening for advertisements
         /// </summary>
         public void StopListening()
         {
             lock (mThreadLock)
             {
-                // If we are not currently listening
+                // If we are not currently listening...
                 if (!Listening)
                     // Do nothing more
                     return;
