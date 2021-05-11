@@ -1,0 +1,2 @@
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.WindowsApp.Bluetooth\obj\Debug\net5.0\SkyBlue.Desktop.WindowsApp.Bluetooth.csprojAssemblyReference.cache
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.WindowsApp.Bluetooth\obj\Debug\net5.0\SkyBlue.Desktop.WindowsApp.Bluetooth.GeneratedMSBuildEditorConfig.editorconfig

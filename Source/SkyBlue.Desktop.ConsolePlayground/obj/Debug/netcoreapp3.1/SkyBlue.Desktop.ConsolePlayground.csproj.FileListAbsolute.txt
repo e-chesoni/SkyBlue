@@ -1,0 +1,17 @@
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\obj\Debug\netcoreapp3.1\SkyBlue.Desktop.ConsolePlayground.AssemblyInfoInputs.cache
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\obj\Debug\netcoreapp3.1\SkyBlue.Desktop.ConsolePlayground.AssemblyInfo.cs
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\obj\Debug\netcoreapp3.1\SkyBlue.Desktop.ConsolePlayground.csproj.CoreCompileInputs.cache
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\bin\Debug\netcoreapp3.1\SkyBlue.Desktop.ConsolePlayground.exe
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\bin\Debug\netcoreapp3.1\SkyBlue.Desktop.ConsolePlayground.deps.json
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\bin\Debug\netcoreapp3.1\SkyBlue.Desktop.ConsolePlayground.runtimeconfig.json
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\bin\Debug\netcoreapp3.1\SkyBlue.Desktop.ConsolePlayground.runtimeconfig.dev.json
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\bin\Debug\netcoreapp3.1\SkyBlue.Desktop.ConsolePlayground.dll
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\bin\Debug\netcoreapp3.1\SkyBlue.Desktop.ConsolePlayground.pdb
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\bin\Debug\netcoreapp3.1\SkyBlue.Desktop.WindowsApp.Bluetooth.dll
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\bin\Debug\netcoreapp3.1\Windows.winmd
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\bin\Debug\netcoreapp3.1\SkyBlue.Desktop.WindowsApp.Bluetooth.pdb
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\obj\Debug\netcoreapp3.1\SkyBlue.Desktop.ConsolePlayground.csprojAssemblyReference.cache
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\obj\Debug\netcoreapp3.1\SkyBlue.Desktop.ConsolePlayground.csproj.CopyComplete
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\obj\Debug\netcoreapp3.1\SkyBlue.Desktop.ConsolePlayground.dll
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\obj\Debug\netcoreapp3.1\SkyBlue.Desktop.ConsolePlayground.pdb
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\obj\Debug\netcoreapp3.1\SkyBlue.Desktop.ConsolePlayground.genruntimeconfig.cache

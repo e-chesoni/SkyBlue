@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkyBlue.Core", "SkyBlue.Core\SkyBlue.Core.csproj", "{681CF910-8340-4BBA-9FC0-87272D946A25}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SkyBlue.Desktop.WindowsApp", "SkyBlue.Desktop.WindowsApp\SkyBlue.Desktop.WindowsApp.csproj", "{C1E4B710-D7CE-4184-A11F-0EBF9158013C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Desktop", "Desktop", "{5AECD3F4-8118-4F89-9827-32C0A8A1D77D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{2C744CD0-BB06-46DB-BD06-2B2A9E3FC2A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyBlue.Desktop.WindowsApp.Bluetooth", "SkyBlue.Desktop.WindowsApp.Bluetooth\SkyBlue.Desktop.WindowsApp.Bluetooth.csproj", "{88B4AA53-F645-40AC-9535-4A04001459C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkyBlue.Desktop.ConsolePlayground", "SkyBlue.Desktop.ConsolePlayground\SkyBlue.Desktop.ConsolePlayground.csproj", "{C23DCB38-3D78-4A24-9221-4417AC8E6489}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{681CF910-8340-4BBA-9FC0-87272D946A25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{681CF910-8340-4BBA-9FC0-87272D946A25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{681CF910-8340-4BBA-9FC0-87272D946A25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{681CF910-8340-4BBA-9FC0-87272D946A25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1E4B710-D7CE-4184-A11F-0EBF9158013C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1E4B710-D7CE-4184-A11F-0EBF9158013C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1E4B710-D7CE-4184-A11F-0EBF9158013C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1E4B710-D7CE-4184-A11F-0EBF9158013C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88B4AA53-F645-40AC-9535-4A04001459C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88B4AA53-F645-40AC-9535-4A04001459C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88B4AA53-F645-40AC-9535-4A04001459C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88B4AA53-F645-40AC-9535-4A04001459C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C23DCB38-3D78-4A24-9221-4417AC8E6489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C23DCB38-3D78-4A24-9221-4417AC8E6489}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C23DCB38-3D78-4A24-9221-4417AC8E6489}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C23DCB38-3D78-4A24-9221-4417AC8E6489}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{681CF910-8340-4BBA-9FC0-87272D946A25} = {2C744CD0-BB06-46DB-BD06-2B2A9E3FC2A7}
+		{C1E4B710-D7CE-4184-A11F-0EBF9158013C} = {5AECD3F4-8118-4F89-9827-32C0A8A1D77D}
+		{88B4AA53-F645-40AC-9535-4A04001459C1} = {5AECD3F4-8118-4F89-9827-32C0A8A1D77D}
+		{C23DCB38-3D78-4A24-9221-4417AC8E6489} = {5AECD3F4-8118-4F89-9827-32C0A8A1D77D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E9D74C0-EBA5-4250-8856-F4294CC31D07}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,5 @@
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\obj\Debug\net5.0\SkyBlue.Desktop.ConsolePlayground.csprojAssemblyReference.cache
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\obj\Debug\net5.0\SkyBlue.Desktop.ConsolePlayground.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\obj\Debug\net5.0\SkyBlue.Desktop.ConsolePlayground.AssemblyInfoInputs.cache
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\obj\Debug\net5.0\SkyBlue.Desktop.ConsolePlayground.AssemblyInfo.cs
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.ConsolePlayground\obj\Debug\net5.0\SkyBlue.Desktop.ConsolePlayground.csproj.CoreCompileInputs.cache
