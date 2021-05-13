@@ -12,20 +12,19 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
     {
         #region Public Properties
         /// <summary>
-        /// The human readable name for the service
+        /// GATT value type
         /// </summary>
-        public string Name { get;  }
+        public string AllocationType { get;  }
 
         /// <summary>
         /// The uniform identifier that is unique to this service
         /// </summary>
-        public string UniformTypeIdentifier { get;  }
+        public ushort UniformTypeIdentifier { get;  }
 
         /// <summary>
-        /// The 16-bit assigned number for this service.
-        /// The Bluetooth GATTT Service UUID contains this.
+        /// The human readable name for the service
         /// </summary>
-        public ushort AssignedNumber { get; }
+        public string Name { get; }
 
         /// <summary>
         /// The type of specification that this service is.
@@ -40,11 +39,11 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
         /// <summary>
         /// Default constructor
         /// </summary>
-        public GattService(string name, string uniformIdentifier, ushort assignedNumber, string profileSpecification)
+        public GattService(string allocationType, ushort uniformIdentifier, string name, string profileSpecification)
         {
-            Name = name;
+            AllocationType = allocationType;
             UniformTypeIdentifier = uniformIdentifier;
-            AssignedNumber = assignedNumber;
+            Name = name;
             ProfileSpecification = profileSpecification;
         }
 

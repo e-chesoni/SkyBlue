@@ -10,7 +10,7 @@ namespace SkyBlue.Desktop.ConsolePlayground
             Console.WriteLine("Hello World!");
 
             // New watcher
-            var watcher = new SkyBlueBluetoothLEAdvertisementWatcher();
+            var watcher = new SkyBlueBluetoothLEAdvertisementWatcher(new GattServiceIds());
 
             // Hook into events
             watcher.StartedListening += () =>

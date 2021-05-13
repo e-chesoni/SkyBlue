@@ -2,7 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
+using Windows.Devices.Bluetooth;
 using Windows.Devices.Bluetooth.Advertisement;
+using Windows.Devices.Bluetooth.GenericAttributeProfile;
 
 namespace SkyBlue.Desktop.WindowsApp.Bluetooth
 {
@@ -23,6 +26,11 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
         /// A list of discovered devices
         /// </summary>
         private readonly Dictionary<ulong, SkyBlueBluetoothLEDevice> mDiscoveredDevices = new Dictionary<ulong, SkyBlueBluetoothLEDevice>();
+
+        /// <summary>
+        /// Details about GATT Services
+        /// </summary>
+        private readonly GattServiceIds mGattServiceIds;
 
         /// <summary>
         /// A thread lock object for this class
@@ -104,8 +112,11 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
         /// <summary>
         /// The default constructor
         /// </summary>
-        public SkyBlueBluetoothLEAdvertisementWatcher()
+        public SkyBlueBluetoothLEAdvertisementWatcher(GattServiceIds gattIds)
         {
+            // Null guard
+            mGattServiceIds = gattIds ?? throw new ArgumentNullException(nameof(gattIds));
+
             // Create bluetoothLE listener
             mWatcher = new BluetoothLEAdvertisementWatcher
             {
@@ -113,7 +124,7 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
             };
 
             // Listen for new advertisements
-            mWatcher.Received += WatcherAdvertisementReceived;
+            mWatcher.Received += WatcherAdvertisementReceivedAsync;
 
             // Listen for stop events when the watcher stops listening
             mWatcher.Stopped += (watcher, e) =>
@@ -132,12 +143,20 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
         /// </summary>
         /// <param name="sender">The watcher</param>
         /// <param name="args">The arguments</param>
-        private void WatcherAdvertisementReceived(BluetoothLEAdvertisementWatcher sender, BluetoothLEAdvertisementReceivedEventArgs args)
+        private async void WatcherAdvertisementReceivedAsync(BluetoothLEAdvertisementWatcher sender, BluetoothLEAdvertisementReceivedEventArgs args)
         {
             // Cleanup Timeouts
             CleanupTimeouts();
 
-            SkyBlueBluetoothLEDevice device = null;
+            // Get BLE device info
+            var device = await GetSkyBlueBluetoothLEDeviceAsync(args.BluetoothAddress);
+
+            // Null guard
+            if (device == null)
+                return;
+
+            // REMOVE
+            return;
 
             // Is new discovery?
             var newDiscovery = !mDiscoveredDevices.ContainsKey(args.BluetoothAddress);
@@ -164,7 +183,7 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
                 // Create new device info instance
                 device = new SkyBlueBluetoothLEDevice
                 (
-                    // Blutetooth address
+                    // Bluetooth address
                     address: args.BluetoothAddress,
                     
                     // Name
@@ -177,7 +196,7 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
                     rssi: args.RawSignalStrengthInDBm
                 );
 
-                // Add/update the deivce in the dictionary
+                // Add/update the device in the dictionary
                 mDiscoveredDevices[args.BluetoothAddress] = device;
             }
 
@@ -186,13 +205,47 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
 
             // If name changed...
             if (nameChanged)
-                // Inform listeneres
+                // Inform listeners
                 DeviceNameChanged(device);
 
             // If new discovery...
             if (newDiscovery)
                 // Inform listeners
                 NewDeviceDiscovered(device);
+        }
+
+        /// <summary>
+        /// Connects to the BLE device and extracts more information from the 
+        /// <see cref="https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.bluetoothledevice?view=winrt-19041"/>
+        /// <param name="address">The bluetooth address of the device to connect to</param>
+        /// </summary>
+        /// <returns></returns>
+        private async Task<SkyBlueBluetoothLEDevice> GetSkyBlueBluetoothLEDeviceAsync(ulong address)
+        {
+            // Get bluetooth device info
+            var device = await BluetoothLEDevice.FromBluetoothAddressAsync(address).AsTask();
+
+            // Null guard
+            if (device == null)
+                return null;
+
+            // Device name
+            var name = device.Name;
+
+            // Get GATT Services that are available
+            var gatt = await device.GetGattServicesAsync().AsTask();
+
+            // If we have any services
+            if (gatt.Status == GattCommunicationStatus.Success)
+            {
+                // Loop each GATT Service
+                foreach (var service in gatt.Services)
+                {
+                    //var gattProfile = service.Uuid;
+                }
+            }
+
+            return null;
         }
 
         /// <summary>
