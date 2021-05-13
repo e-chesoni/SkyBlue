@@ -8,7 +8,7 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
 {
     /// <summary>
     /// Wraps and makes use of the <see cref="BluetoothLEAdvertisementWatcher"/>
-    /// for easier consumptoon
+    /// for easier consumption
     /// </summary>
     public class SkyBlueBluetoothLEAdvertisementWatcher
     {
