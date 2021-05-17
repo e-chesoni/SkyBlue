@@ -9,3 +9,11 @@ C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.WindowsApp.Blue
 C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.WindowsApp.Bluetooth\obj\Debug\netcoreapp3.1\SkyBlue.Desktop.WindowsApp.Bluetooth.csproj.CopyComplete
 C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.WindowsApp.Bluetooth\obj\Debug\netcoreapp3.1\SkyBlue.Desktop.WindowsApp.Bluetooth.dll
 C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.WindowsApp.Bluetooth\obj\Debug\netcoreapp3.1\SkyBlue.Desktop.WindowsApp.Bluetooth.pdb
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.WindowsApp.Bluetooth\bin\Debug\netcoreapp3.1\SkyBlue.Desktop.WindowsApp.deps.json
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.WindowsApp.Bluetooth\bin\Debug\netcoreapp3.1\SkyBlue.Desktop.WindowsApp.runtimeconfig.json
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.WindowsApp.Bluetooth\bin\Debug\netcoreapp3.1\SkyBlue.Desktop.WindowsApp.runtimeconfig.dev.json
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.WindowsApp.Bluetooth\bin\Debug\netcoreapp3.1\SkyBlue.Desktop.WindowsApp.exe
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.WindowsApp.Bluetooth\bin\Debug\netcoreapp3.1\SkyBlue.Core.dll
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.WindowsApp.Bluetooth\bin\Debug\netcoreapp3.1\SkyBlue.Desktop.WindowsApp.dll
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.WindowsApp.Bluetooth\bin\Debug\netcoreapp3.1\SkyBlue.Core.pdb
+C:\Users\elainechesoni\WindowsDev\SkyBlue\Source\SkyBlue.Desktop.WindowsApp.Bluetooth\bin\Debug\netcoreapp3.1\SkyBlue.Desktop.WindowsApp.pdb
