@@ -149,13 +149,14 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
             CleanupTimeouts();
 
             // Get BLE device info
+            //SkyBlueBluetoothLEDevice device = null;
             var device = await GetSkyBlueBluetoothLEDeviceAsync(args.BluetoothAddress);
 
-            // Null guard
-            if (device == null)
-                return;
+            // Null guard: PICKS UP NO DEVICES WHEN UNCOMMENTED
+            //if (device == null)
+            //    return;
 
-            // REMOVE
+            // REMOVE: DO NOT RUN APP W/O BREAK POINTS WITH THIS IN--IT WILL CAUSE UNHANDLED EXCEPTIONS
             return;
 
             // Is new discovery?
@@ -241,7 +242,7 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
                 // Loop each GATT Service
                 foreach (var service in gatt.Services)
                 {
-                    //var gattProfile = service.Uuid;
+                    var gattProfile = service.Uuid;
                 }
             }
 
