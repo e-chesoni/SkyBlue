@@ -149,7 +149,7 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
             CleanupTimeouts();
 
             // Get BLE device info
-            //SkyBlueBluetoothLEDevice device = null;
+            // TODO: Fix 'Value does not fall within expected range" System.Exception
             var device = await GetSkyBlueBluetoothLEDeviceAsync(
                 args.BluetoothAddress, 
                 args.Timestamp, 
@@ -159,13 +159,10 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
             if (device == null)
                 return;
 
-            // REMOVE: DO NOT RUN APP W/O BREAK POINTS WITH THIS IN--IT WILL CAUSE UNHANDLED EXCEPTIONS
-            //return;
-
             // Is new discovery?
             var newDiscovery = false;
-
             var existingName = default(string);
+            var nameChanged = false;
 
             // Lock it up
             lock (mThreadLock)
@@ -177,19 +174,21 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
                 if (!newDiscovery)
                     // Store the old name
                     existingName = mDiscoveredDevices[device.DeviceId].Name;
-            }
 
-            // Name changed?
-            var nameChanged =
-                // If it already exists
-                !newDiscovery &&
-                // And is not a blank name
-                !string.IsNullOrEmpty(device.Name) &&
-                // And the name is different
-                existingName != device.Name;
+                // Name changed?
+                nameChanged =
+                    // If it already exists
+                    !newDiscovery &&
+                    // And is not a blank name
+                    !string.IsNullOrEmpty(device.Name) &&
+                    // And the name is different
+                    existingName != device.Name;
 
-            lock (mThreadLock)
-            {
+                // If no longer listening
+                if (!Listening)
+                    // Don't bother adding to the list and do nothing
+                    return;
+
                 // Add/update the device in the dictionary
                 mDiscoveredDevices[device.DeviceId] = device;
             }
@@ -218,7 +217,7 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
         private async Task<SkyBlueBluetoothLEDevice> GetSkyBlueBluetoothLEDeviceAsync(ulong address, DateTimeOffset broadcastTime, short rssi)
         {
             // Get bluetooth device info
-            var device = await BluetoothLEDevice.FromBluetoothAddressAsync(address).AsTask();
+            using var device = await BluetoothLEDevice.FromBluetoothAddressAsync(address).AsTask();
 
             // Null guard
             if (device == null)
