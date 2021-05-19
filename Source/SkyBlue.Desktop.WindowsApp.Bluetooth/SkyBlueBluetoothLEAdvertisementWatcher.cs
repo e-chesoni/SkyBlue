@@ -150,55 +150,48 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
 
             // Get BLE device info
             //SkyBlueBluetoothLEDevice device = null;
-            var device = await GetSkyBlueBluetoothLEDeviceAsync(args.BluetoothAddress, args.Timestamp, args.RawSignalStrengthInDBm);
+            var device = await GetSkyBlueBluetoothLEDeviceAsync(
+                args.BluetoothAddress, 
+                args.Timestamp, 
+                args.RawSignalStrengthInDBm);
 
-            // Null guard: PICKS UP NO DEVICES WHEN UNCOMMENTED
-            //if (device == null)
-            //    return;
+            // Null guard
+            if (device == null)
+                return;
 
             // REMOVE: DO NOT RUN APP W/O BREAK POINTS WITH THIS IN--IT WILL CAUSE UNHANDLED EXCEPTIONS
-            return;
+            //return;
 
             // Is new discovery?
-            var newDiscovery = !mDiscoveredDevices.ContainsKey(args.BluetoothAddress);
+            var newDiscovery = false;
+
+            var existingName = default(string);
+
+            // Lock it up
+            lock (mThreadLock)
+            {
+                // Check if this is a new discovery
+                newDiscovery = !mDiscoveredDevices.ContainsKey(device.DeviceId);
+
+                // If this is not new
+                if (!newDiscovery)
+                    // Store the old name
+                    existingName = mDiscoveredDevices[device.DeviceId].Name;
+            }
 
             // Name changed?
             var nameChanged =
                 // If it already exists
                 !newDiscovery &&
                 // And is not a blank name
-                !string.IsNullOrEmpty(args.Advertisement.LocalName) &&
+                !string.IsNullOrEmpty(device.Name) &&
                 // And the name is different
-                mDiscoveredDevices[args.BluetoothAddress].Name != args.Advertisement.LocalName;
+                existingName != device.Name;
 
             lock (mThreadLock)
             {
-                // Get the name of the device
-                var name = args.Advertisement.LocalName;
-
-                // If new name is blank, and we already have a device...
-                if (string.IsNullOrEmpty(name) && !newDiscovery)
-                    // Don't override what could be an actual name already
-                    name = mDiscoveredDevices[args.BluetoothAddress].Name;
-
-                // Create new device info instance
-                device = new SkyBlueBluetoothLEDevice
-                (
-                    // Bluetooth address
-                    address: args.BluetoothAddress,
-                    
-                    // Name
-                    name: name,
-                    
-                    // Broadcast time
-                    broadcastTime: args.Timestamp,
-                    
-                    // Signal strength
-                    rssi: args.RawSignalStrengthInDBm
-                );
-
                 // Add/update the device in the dictionary
-                mDiscoveredDevices[args.BluetoothAddress] = device;
+                mDiscoveredDevices[device.DeviceId] = device;
             }
 
             // Inform listeners
@@ -259,11 +252,11 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
                 broadcastTime: broadcastTime,
                 // Signal Strength
                 rssi: rssi,
-                // Is connected?
+                // Is Connected?
                 connected: device.ConnectionStatus == BluetoothConnectionStatus.Connected,
-                // Can pair?
+                // Can Pair?
                 canPair: device.DeviceInformation.Pairing.CanPair,
-                // Is paired?
+                // Is Paired?
                 paired: device.DeviceInformation.Pairing.IsPaired
             );
         }

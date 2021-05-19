@@ -96,7 +96,7 @@ namespace SkyBlue.Desktop.WindowsApp.BluetoothLE
         /// <returns>string</returns>
         public override string ToString()
         {
-            return $"{ (string.IsNullOrEmpty(Name) ? "[No Name]" : Name) } {DeviceId} ({SignalStrengthInDB})";
+            return $"{ (string.IsNullOrEmpty(Name) ? "[No Name]" : Name) } [{DeviceId}] ({SignalStrengthInDB})";
         }
     }
 }
