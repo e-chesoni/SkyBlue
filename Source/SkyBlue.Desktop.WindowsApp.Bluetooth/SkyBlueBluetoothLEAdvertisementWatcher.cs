@@ -25,7 +25,7 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
         /// <summary>
         /// A list of discovered devices
         /// </summary>
-        private readonly Dictionary<ulong, SkyBlueBluetoothLEDevice> mDiscoveredDevices = new Dictionary<ulong, SkyBlueBluetoothLEDevice>();
+        private readonly Dictionary<string, SkyBlueBluetoothLEDevice> mDiscoveredDevices = new Dictionary<string, SkyBlueBluetoothLEDevice>();
 
         /// <summary>
         /// Details about GATT Services
@@ -150,7 +150,7 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
 
             // Get BLE device info
             //SkyBlueBluetoothLEDevice device = null;
-            var device = await GetSkyBlueBluetoothLEDeviceAsync(args.BluetoothAddress);
+            var device = await GetSkyBlueBluetoothLEDeviceAsync(args.BluetoothAddress, args.Timestamp, args.RawSignalStrengthInDBm);
 
             // Null guard: PICKS UP NO DEVICES WHEN UNCOMMENTED
             //if (device == null)
@@ -219,9 +219,10 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
         /// Connects to the BLE device and extracts more information from the 
         /// <see cref="https://docs.microsoft.com/en-us/uwp/api/windows.devices.bluetooth.bluetoothledevice?view=winrt-19041"/>
         /// <param name="address">The bluetooth address of the device to connect to</param>
-        /// </summary>
+        /// <param name="broadcastTime">The time the broadcast message was received</param>
+        /// <param name="rssi">The signal strength in db </param>
         /// <returns></returns>
-        private async Task<SkyBlueBluetoothLEDevice> GetSkyBlueBluetoothLEDeviceAsync(ulong address)
+        private async Task<SkyBlueBluetoothLEDevice> GetSkyBlueBluetoothLEDeviceAsync(ulong address, DateTimeOffset broadcastTime, short rssi)
         {
             // Get bluetooth device info
             var device = await BluetoothLEDevice.FromBluetoothAddressAsync(address).AsTask();
@@ -229,9 +230,6 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
             // Null guard
             if (device == null)
                 return null;
-
-            // Device name
-            var name = device.Name;
 
             // Get GATT Services that are available
             var gatt = await device.GetGattServicesAsync().AsTask();
@@ -242,11 +240,32 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
                 // Loop each GATT Service
                 foreach (var service in gatt.Services)
                 {
+                    // This ID contains the GATT profile assigned number we want!
+                    // TODO: Get more info and connect
                     var gattProfile = service.Uuid;
                 }
             }
 
-            return null;
+            // Return the new device information
+            return new SkyBlueBluetoothLEDevice
+            (
+                // Device ID
+                deviceId: device.DeviceId,
+                // Bluetooth Address
+                address: device.BluetoothAddress,
+                // Device Name
+                name: device.Name,
+                // Broadcast Time
+                broadcastTime: broadcastTime,
+                // Signal Strength
+                rssi: rssi,
+                // Is connected?
+                connected: device.ConnectionStatus == BluetoothConnectionStatus.Connected,
+                // Can pair?
+                canPair: device.DeviceInformation.Pairing.CanPair,
+                // Is paired?
+                paired: device.DeviceInformation.Pairing.IsPaired
+            );
         }
 
         /// <summary>

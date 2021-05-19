@@ -33,6 +33,26 @@ namespace SkyBlue.Desktop.WindowsApp.BluetoothLE
         /// </summary>
         public short SignalStrengthInDB { get; }
 
+        /// <summary>
+        /// Indicates if we are connected to this device
+        /// </summary>
+        public bool Connected { get; }
+
+        /// <summary>
+        /// Indicates if this device supports pairing
+        /// </summary>
+        public bool CanPair { get;  }
+
+        /// <summary>
+        /// Indicates if currently paired to this device
+        /// </summary>
+        public bool Paired { get;  }
+
+        /// <summary>
+        /// The permanent unique id of this device
+        /// </summary>
+        public string DeviceId { get;  }
+
         #endregion
 
         #region Constructor
@@ -40,12 +60,32 @@ namespace SkyBlue.Desktop.WindowsApp.BluetoothLE
         /// <summary>
         /// Default constructor
         /// </summary>
-        public SkyBlueBluetoothLEDevice(ulong address, string name, short rssi, DateTimeOffset broadcastTime)
+        /// <param name="address">The Bluetooth device address</param>
+        /// <param name="name">The device name</param>
+        /// <param name="rssi">The signal strenght</param>
+        /// <param name="broadcastTime">The broadcast time of discovery</param>
+        /// <param name="connected">If connected to the device</param>
+        /// <param name="canPair">If we can pair to the device</param>
+        /// <param name="isPaired">If we are paired to the device</param>
+        /// <param name="deviceId">The unique id of the device</param>
+        public SkyBlueBluetoothLEDevice(
+            ulong address, 
+            string name, 
+            short rssi, 
+            DateTimeOffset broadcastTime,
+            bool connected,
+            bool canPair,
+            bool paired,
+            string deviceId)
         {
             Address = address;
             Name = name;
             SignalStrengthInDB = rssi;
             BroadcastTime = broadcastTime;
+            Connected = connected;
+            CanPair = canPair;
+            Paired = paired;
+            DeviceId = deviceId;
         }
 
         #endregion
@@ -56,7 +96,7 @@ namespace SkyBlue.Desktop.WindowsApp.BluetoothLE
         /// <returns>string</returns>
         public override string ToString()
         {
-            return $"{ (string.IsNullOrEmpty(Name) ? "[No Name]" : Name) } {Address} ({SignalStrengthInDB})";
+            return $"{ (string.IsNullOrEmpty(Name) ? "[No Name]" : Name) } {DeviceId} ({SignalStrengthInDB})";
         }
     }
 }
