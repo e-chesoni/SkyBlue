@@ -223,6 +223,7 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
             if (device == null)
                 return null;
 
+            // NOTE: This can throw a System.Exception for failures
             // Get GATT Services that are available
             var gatt = await device.GetGattServicesAsync().AsTask();
 
