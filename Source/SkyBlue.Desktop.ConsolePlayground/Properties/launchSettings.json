@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SkyBlue.Desktop.ConsolePlayground": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "SkyBlue.Desktop.WindowsApp.Bluetooth": {
+      "commandName": "Project",
+      "nativeDebugging": true
+    }
+  }
+}
