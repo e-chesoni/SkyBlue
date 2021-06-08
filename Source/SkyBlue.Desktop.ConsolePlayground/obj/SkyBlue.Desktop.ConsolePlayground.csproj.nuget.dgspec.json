@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Desktop.ConsolePlayground\\SkyBlue.Desktop.ConsolePlayground.csproj": {}
+    "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Desktop.ConsolePlayground\\SkyBlue.Desktop.ConsolePlayground.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Core\\SkyBlue.Core.csproj": {
+    "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Core\\SkyBlue.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Core\\SkyBlue.Core.csproj",
+        "projectUniqueName": "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Core\\SkyBlue.Core.csproj",
         "projectName": "SkyBlue.Core",
-        "projectPath": "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Core\\SkyBlue.Core.csproj",
-        "packagesPath": "C:\\Users\\Michael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Core\\obj\\",
+        "projectPath": "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Core\\SkyBlue.Core.csproj",
+        "packagesPath": "C:\\Users\\Elaine Chesoni\\.nuget\\packages\\",
+        "outputPath": "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Michael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Elaine Chesoni\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -69,25 +68,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Desktop.ConsolePlayground\\SkyBlue.Desktop.ConsolePlayground.csproj": {
+    "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Desktop.ConsolePlayground\\SkyBlue.Desktop.ConsolePlayground.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Desktop.ConsolePlayground\\SkyBlue.Desktop.ConsolePlayground.csproj",
+        "projectUniqueName": "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Desktop.ConsolePlayground\\SkyBlue.Desktop.ConsolePlayground.csproj",
         "projectName": "SkyBlue.Desktop.ConsolePlayground",
-        "projectPath": "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Desktop.ConsolePlayground\\SkyBlue.Desktop.ConsolePlayground.csproj",
-        "packagesPath": "C:\\Users\\Michael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Desktop.ConsolePlayground\\obj\\",
+        "projectPath": "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Desktop.ConsolePlayground\\SkyBlue.Desktop.ConsolePlayground.csproj",
+        "packagesPath": "C:\\Users\\Elaine Chesoni\\.nuget\\packages\\",
+        "outputPath": "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Desktop.ConsolePlayground\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Michael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Elaine Chesoni\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -102,8 +100,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Desktop.WindowsApp.Bluetooth\\SkyBlue.Desktop.WindowsApp.Bluetooth.csproj": {
-                "projectPath": "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Desktop.WindowsApp.Bluetooth\\SkyBlue.Desktop.WindowsApp.Bluetooth.csproj"
+              "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Desktop.WindowsApp.Bluetooth\\SkyBlue.Desktop.WindowsApp.Bluetooth.csproj": {
+                "projectPath": "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Desktop.WindowsApp.Bluetooth\\SkyBlue.Desktop.WindowsApp.Bluetooth.csproj"
               }
             }
           }
@@ -132,25 +130,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Desktop.WindowsApp.Bluetooth\\SkyBlue.Desktop.WindowsApp.Bluetooth.csproj": {
+    "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Desktop.WindowsApp.Bluetooth\\SkyBlue.Desktop.WindowsApp.Bluetooth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Desktop.WindowsApp.Bluetooth\\SkyBlue.Desktop.WindowsApp.Bluetooth.csproj",
+        "projectUniqueName": "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Desktop.WindowsApp.Bluetooth\\SkyBlue.Desktop.WindowsApp.Bluetooth.csproj",
         "projectName": "SkyBlue.Desktop.WindowsApp.Bluetooth",
-        "projectPath": "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Desktop.WindowsApp.Bluetooth\\SkyBlue.Desktop.WindowsApp.Bluetooth.csproj",
-        "packagesPath": "C:\\Users\\Michael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Desktop.WindowsApp.Bluetooth\\obj\\",
+        "projectPath": "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Desktop.WindowsApp.Bluetooth\\SkyBlue.Desktop.WindowsApp.Bluetooth.csproj",
+        "packagesPath": "C:\\Users\\Elaine Chesoni\\.nuget\\packages\\",
+        "outputPath": "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Desktop.WindowsApp.Bluetooth\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Michael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Elaine Chesoni\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -165,11 +162,11 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Core\\SkyBlue.Core.csproj": {
-                "projectPath": "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Core\\SkyBlue.Core.csproj"
+              "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Core\\SkyBlue.Core.csproj": {
+                "projectPath": "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Core\\SkyBlue.Core.csproj"
               },
-              "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Desktop.WindowsApp\\SkyBlue.Desktop.WindowsApp.csproj": {
-                "projectPath": "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Desktop.WindowsApp\\SkyBlue.Desktop.WindowsApp.csproj"
+              "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Desktop.WindowsApp\\SkyBlue.Desktop.WindowsApp.csproj": {
+                "projectPath": "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Desktop.WindowsApp\\SkyBlue.Desktop.WindowsApp.csproj"
               }
             }
           }
@@ -183,7 +180,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.Windows.SDK.Contracts": {
+              "target": "Package",
+              "version": "[10.0.19041.1, )"
+            }
+          },
           "imports": [
+            "uap10.0.19041",
             "net461",
             "net462",
             "net47",
@@ -198,25 +202,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Desktop.WindowsApp\\SkyBlue.Desktop.WindowsApp.csproj": {
+    "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Desktop.WindowsApp\\SkyBlue.Desktop.WindowsApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Desktop.WindowsApp\\SkyBlue.Desktop.WindowsApp.csproj",
+        "projectUniqueName": "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Desktop.WindowsApp\\SkyBlue.Desktop.WindowsApp.csproj",
         "projectName": "SkyBlue.Desktop.WindowsApp",
-        "projectPath": "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Desktop.WindowsApp\\SkyBlue.Desktop.WindowsApp.csproj",
-        "packagesPath": "C:\\Users\\Michael\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Desktop.WindowsApp\\obj\\",
+        "projectPath": "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Desktop.WindowsApp\\SkyBlue.Desktop.WindowsApp.csproj",
+        "packagesPath": "C:\\Users\\Elaine Chesoni\\.nuget\\packages\\",
+        "outputPath": "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Desktop.WindowsApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Michael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Elaine Chesoni\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -231,8 +234,8 @@
           "netcoreapp3.1": {
             "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Core\\SkyBlue.Core.csproj": {
-                "projectPath": "C:\\Users\\Michael\\Dev\\skyblue\\Source\\SkyBlue.Core\\SkyBlue.Core.csproj"
+              "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Core\\SkyBlue.Core.csproj": {
+                "projectPath": "C:\\Dev\\SkyBlue\\Source\\SkyBlue.Core\\SkyBlue.Core.csproj"
               }
             }
           }
@@ -264,7 +267,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

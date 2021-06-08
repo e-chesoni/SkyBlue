@@ -16,3 +16,12 @@ C:\Users\Michael\Dev\skyblue\Source\SkyBlue.Core\obj\Debug\netcoreapp3.1\SkyBlue
 C:\Users\Michael\Dev\skyblue\Source\SkyBlue.Core\obj\Debug\netcoreapp3.1\SkyBlue.Core.csproj.CoreCompileInputs.cache
 C:\Users\Michael\Dev\skyblue\Source\SkyBlue.Core\obj\Debug\netcoreapp3.1\SkyBlue.Core.dll
 C:\Users\Michael\Dev\skyblue\Source\SkyBlue.Core\obj\Debug\netcoreapp3.1\SkyBlue.Core.pdb
+C:\Dev\SkyBlue\Source\SkyBlue.Core\bin\Debug\netcoreapp3.1\SkyBlue.Core.deps.json
+C:\Dev\SkyBlue\Source\SkyBlue.Core\bin\Debug\netcoreapp3.1\SkyBlue.Core.dll
+C:\Dev\SkyBlue\Source\SkyBlue.Core\bin\Debug\netcoreapp3.1\SkyBlue.Core.pdb
+C:\Dev\SkyBlue\Source\SkyBlue.Core\obj\Debug\netcoreapp3.1\SkyBlue.Core.csproj.AssemblyReference.cache
+C:\Dev\SkyBlue\Source\SkyBlue.Core\obj\Debug\netcoreapp3.1\SkyBlue.Core.AssemblyInfoInputs.cache
+C:\Dev\SkyBlue\Source\SkyBlue.Core\obj\Debug\netcoreapp3.1\SkyBlue.Core.AssemblyInfo.cs
+C:\Dev\SkyBlue\Source\SkyBlue.Core\obj\Debug\netcoreapp3.1\SkyBlue.Core.csproj.CoreCompileInputs.cache
+C:\Dev\SkyBlue\Source\SkyBlue.Core\obj\Debug\netcoreapp3.1\SkyBlue.Core.dll
+C:\Dev\SkyBlue\Source\SkyBlue.Core\obj\Debug\netcoreapp3.1\SkyBlue.Core.pdb

@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Michael\Dev\skyblue\Source\SkyBlue.Desktop.WindowsApp\obj\Debug\netcoreapp3.1\
+C:\Dev\SkyBlue\Source\SkyBlue.Desktop.WindowsApp\obj\Debug\netcoreapp3.1\
 SkyBlue.Desktop.WindowsApp
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-C:\Users\Michael\Dev\skyblue\Source\SkyBlue.Desktop.WindowsApp\App.xaml
+C:\Dev\SkyBlue\Source\SkyBlue.Desktop.WindowsApp\App.xaml
 11407045341
 
 3-1233169557
-2141577682397
+214663997553
 MainWindow.xaml;
 
 False
