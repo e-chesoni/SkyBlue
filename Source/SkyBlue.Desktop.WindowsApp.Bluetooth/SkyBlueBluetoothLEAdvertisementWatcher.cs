@@ -236,6 +236,18 @@ namespace SkyBlue.Desktop.WindowsApp.Bluetooth
                     // This ID contains the GATT profile assigned number we want!
                     // TODO: Get more info and connect
                     var gattProfile = service.Uuid;
+
+                    GattCharacteristicsResult result = await service.GetCharacteristicsAsync().AsTask();
+
+                    // If we have any characteristics
+                    if (result.Status == GattCommunicationStatus.Success)
+                    {
+                        var characteristics = result.Characteristics;
+                        //foreach (var characteristic in result.Characteristics)
+                        //{
+                            // Do something
+                        //}
+                    }
                 }
             }
 
